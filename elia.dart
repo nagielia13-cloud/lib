@@ -313,7 +313,9 @@ void main() {
     print("Item: $item | Price: \$$price");
   });
 }*/
-/*void main() {
+/*import 'dart:ffi';
+
+void main() {
   // 1. استخدام reduce لإيجاد المجموع
   List<int> numbers = [10, 20, 30, 40, 50];
 
