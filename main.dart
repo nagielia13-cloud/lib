@@ -1,3 +1,4 @@
+//                {1}
 /*import 'dart:io';
 void main() {
   print("Enter first name :");
@@ -6,56 +7,50 @@ void main() {
   String input2 = stdin.readLineSync()!;
   print('Hello $input1 $input2' );
 }*/
+//               {2}
 /*void main() {
   const pi = 3.14;
   double radius = 5;
   var area = pi * radius * radius;
   var currentDate = DateTime.now();
+  print(currentDate);
   print("The area of the circle with radius $radius is: $area");
   double calculateArea(double r, double p) => p * (r * r);
   print("Calculated area using function: ${calculateArea(radius, pi)}");
 }*/
-/*void main() {
-  final String currentTime = DateTime.now().toString();
-  print(currentTime);
-  // النوع هنا محدد يدوياً، ويمكنك كتابة: final currentTime = ...
-}*/
+//             {3}
 /*void main (){
-int multiply(int x) => x * 2;
-print(multiply(10));
+int multiply(int x,int z) => x * z;
+print(multiply(10,5));
 }*/
+//            {4}
 /*void main() {
-  var numbers = [1, 2, 3];
-  print(numbers.length); // 3
-  var doubled = numbers.map((x) => x * 2); // هنا استخدمنا دالة السهم مباشرة
-  print(doubled); // (2, 4, 6)
-  print(numbers);
+  var numbers = [1, 2, 3,4,5,6,7,8,9,10];
+  var doubled = numbers.map((x) => x * 2);
+  var z = numbers.map((x) => x %2==0);
+  print(z);
+  print(numbers.length);
+  print(doubled);
 }*/
-/*void main() {
-  int num1 = 5;
-  double num2 = 10.2;
-  int num3 = 50;
-  var sum = num1 + num2;
-  var total = sum + num3;
-  print('sum = $sum');
-  print('total = $total');
-}*/
+//           {5}
 /*void main() {
   String name = 'elia';
   int age = 22;
-  print("Hello $name, you are $age years old.");
+  String massage = ('Hello $name, you are $age years old.');
+  print(massage);
 }*/
+//          {6}
 /*void main() {
   for (int i = 1; i <= 5; i++) {
-    print('Number: $i');
+    print('Number for: $i');
   }
   int i = 0;
   while (i < 5) {
      i++;
-    print('Count: $i');
-   
+    print('Count while: $i');
   }
 }*/
+//         {7}
 /*void main() {
   int i = 0;
 do {
@@ -63,43 +58,31 @@ do {
   i++;
 } while (i < 5);
 }*/
+//        {8}
 /*void main(){
 for (int i = 0; i < 5; i++) {
   if (i == 3) break;
   print(i);
 }
-
-for (int i = 0; i < 5; i++) {
-  if (i == 3) continue;
+for (int i = 0; i <= 5; i++) {
+  if (i == 3 ) continue;
   print(i);
 }
 }*/
+//        {9}
 /*import 'dart:io';
-
 void main() {
-  print("--- Basic Dart Calculator ---");
-
-  // 1. Taking first number input
   print("Enter the first number:");
   double? num1 = double.tryParse(stdin.readLineSync()!);
-
-  // 2. Taking the operator
   print("Enter an operator (+, -, *, /):");
   String? operator = stdin.readLineSync();
-
-  // 3. Taking second number input
   print("Enter the second number:");
   double? num2 = double.tryParse(stdin.readLineSync()!);
-
-  // Check if inputs are valid numbers
   if (num1 == null || num2 == null) {
     print("Invalid input! Please enter numeric values.");
     return;
   }
-
   double result;
-
-  // 4. Logic using if-else statements
   if (operator == "+") {
     result = num1 + num2;
     print("Result: $num1 + $num2 = $result");
@@ -113,7 +96,6 @@ void main() {
     print("Result: $num1 * $num2 = $result");
   } 
   else if (operator == "/") {
-    // Handling division by zero
     if (num2 == 0) {
       print("Error: Cannot divide by zero!");
     } else {
@@ -125,12 +107,11 @@ void main() {
     print("Error: Invalid operator provided.");
   }
 }*/
+//            {10}
 /*import 'dart:io';
-
 void main() {
   print('Enter a number (1-7) for the day of the week:');
- 
-  String dayName = '1';
+  String dayName = stdin.readLineSync()!;
   switch (dayName) {
     case '1':
       dayName = 'Saturday';
@@ -158,183 +139,64 @@ void main() {
   }
   print('Day: $dayName');
 }*/
-/*import 'dart:io';
-
-void main() {
-  print("Enter a number (1-7) for the day of the week:");
-  
-  // Reading input and converting to an integer
-  String? input = stdin.readLineSync();
-  int? dayNumber = int.tryParse(input ?? "");
-
-  // Using switch statement to determine the day
-  switch (dayNumber) {
-    case 1:
-      print("Monday");
-      break;
-    case 2:
-      print("Tuesday");
-      break;
-    case 3:
-      print("Wednesday");
-      break;
-    case 4:
-      print("Thursday");
-      break;
-    case 5:
-      print("Friday");
-      break;
-    case 6:
-      print("Saturday");
-      break;
-    case 7:
-      print("Sunday");
-      break;
-    default:
-      print("Invalid input");
-  }
-}*/
+//           {11}
 /*void main() {
   print("Odd numbers from 1 to 20:");
-  
-  int i = 1; // Initialization
-  
+  int i = 1;
   while (i <= 20) {
-    // Check if the number is NOT divisible by 2
     if (i % 2 != 0) {
       print(i);
-      
     }
-    i++; // Increment to avoid an infinite loop
+    i++; 
   }
 }*/
+//          {12}
 /*void main() {
   print("Even numbers from 1 to 20:");
-  
   for (int i = 1; i <= 20; i++) {
-    // Check if the number is divisible by 2
     if (i % 2 == 0) {
       print(i);
     }
   }
 }*/
-/*import 'dart:io';
-
-void main() {
-  print("Enter a positive integer:");
-  String? input = stdin.readLineSync();
-  int? number = int.tryParse(input ?? "");
-
-  // Check for invalid or negative input
-  if (number == null || number < 0) {
-    print("Please enter a valid positive integer.");
-    return;
-  }
-
-  int originalNumber = number;
-  int sum = 0;
-
-  // Using do-while loop to extract and sum digits
-  do {
-    int lastDigit = number! % 10; // Get the last digit
-    sum += lastDigit;             // Add it to the sum
-    number = number ~/ 10;       // Remove the last digit using integer division
-  } while (number! > 0);
-
-  print("The sum of the digits in $originalNumber is: $sum");
-}*/
+//        {13}
 /*void main() {
   for (int i = 1; i <= 50; i++) {
     if (i % 3 == 0) continue;
     print(i);
   }
 }*/
+//          {14}
 /*void welcomeUser(String name) {
   print('welcome, $name!');
 }
-
 void main() {
-  // إعادة استخدام الدالة مع أسماء مختلفة
   welcomeUser("elia");
-  welcomeUser("nagi");
 }*/
+//          {15}
 /*double x (double price, double discount) {
   return price - (price * (discount / 100));
 }
-
 void main() {
-  double z = x(1000, 15); // خصم 15%
+  double z = x(1000, 15); 
   print("السعر بعد الخصم: $z");
 }*/
-/*void logError(String message) {
-  print(" [خطأ]: $message");
-}
-void main() {
-  logError("حدث خطأ غير متوقع أثناء تحميل البيانات.");
-}*/
-/*void main() {
-  // 1. تجربة دالة الضرب
-  int product = multiply(5, 5);
-  print("Product of 5 * 5 = $product");
-
-  // 2. تجربة دالة التحقق من الرقم الزوجي
-  int myNumber = 10;
-  bool checkEven = isEven(myNumber);
-  print("Is $myNumber even? $checkEven");
-
-  // 3. تجربة دالة التحية
-  printGreeting("elia");
-}
-
-// دالة تأخذ رقمين وتعود بحاصل ضربهما
-int multiply(int a, int b) {
+//           {16}
+/*int multiply(int a, int b) {
   return a * b;
 }
-
-// دالة منطقية تتحقق هل الرقم زوجي أم لا
 bool isEven(int number) {
   return number % 2 == 0;
 }
-
-// دالة تقوم بمهمة الطباعة فقط ولا تعيد قيمة
-void printGreeting(String name) {
-  print("Hello, $name!");
-}*/
-/*void main() {
-  int multiply(int a, int b) => a * b;
-bool isEven(int number) => number % 2 == 0;
-void printGreeting(String name) => print("Hello, $name!");
+void main() {
   int product = multiply(5, 5);
   print("Product of 5 * 5 = $product");
-  int myNumber = 19;
+  int myNumber = 10;
   bool checkEven = isEven(myNumber);
   print("Is $myNumber even? $checkEven");
-  printGreeting("elia");
 }*/
-/*void main() {
-  // 1. استدعاء دالة وصف الشخص (باستخدام المعاملات المسماة)
-  print("--- Testing describePerson ---");
-  describePerson(name: "Ahmed", age: 25, occupation: "Engineer");
-  describePerson(name: "Sara"); // ستستخدم القيم الافتراضية للعمر والوظيفة
-
-  print("\n--- Testing calculateArea ---");
-  // 2. استدعاء دالة حساب المساحة (باستخدام المعاملات الموضعية الاختيارية)
-  print("Area (default): ${calculateArea()}"); // طول 1 وعرض 1
-  print("Area (length 5): ${calculateArea(5)}"); // طول 5 وعرض 1
-  print("Area (5x3): ${calculateArea(5, 3)}"); // طول 5 وعرض 3
-}
-
-// دالة وصف الشخص: تستخدم Named Parameters داخل { }
-void describePerson({required String name, int age = 0, String occupation = 'Unknown'}) {
-  print('$name is $age years old and works as a $occupation.');
-}
-
-// دالة حساب المساحة: تستخدم Optional Positional Parameters داخل [ ]
-double calculateArea([double length = 1, double width = 1]) {
-  return length * width;
-}*/
+//          {17}
 /*import 'dart:io';
-
 void hi(String name) {
   print("Hello $name from sudan");
 }
@@ -342,82 +204,50 @@ void main() {
  String name = stdin.readLineSync()!;
   hi(name);
 }*/
+//          {18}
 /*void num({required String name, int stars = 5}) {
-  print("$name $stars");
+  print('$name $stars');
 }
 void main() {
   num( stars: 10,name: "elia");
-}*/
+} */
+//           {19}
 /*void main() {
-  int o = 25;
-  int p = 10;
-  print(o == p);
-}*/
-/*void main() {
-  print("Enter first name :");
-  String name = "elia";
-  print(name.length);
-}*/
-
-/*void main() {
-  String name = "elia";
-  var names = name.substring(1);
+  String name = "123456789";
+  var names = name.substring(1,5);
   print(names);
 }*/
-/*void main() {
-  String name = "elia";
-  var names = name.toUpperCase();
-  print(names);
-}*/
-/*void main() {
-  int age = 22;
-  var x=(age % 2 == 0)? "even":"odd";
-  print(x);
-}*/
-
+//          {20}
 /*void main() {
   List<String> fruits = ['Apple', 'Banana', 'Cherry'];
-  print('اطبع الفاكه الاولى:');
   print(fruits[0]);
-  print('اطبع عدد الفواكه:');
-  print(fruits.length);
-  print('اضف فاكهه جديد');
   fruits.add('Mango');
   print(fruits);
-  print('احذف فاكهه من القائمه');
   fruits.remove('Banana');
   print(fruits);
+  print(fruits.length);
 }*/
+//          {21}
 /*void main() {
-  Map<String, int> scores = {
-    'Alice': 90,
-    'Bob': 85,
-    'Charlie': 92,
-  };
-
+  Map<String, int> scores = {'Alice': 90, 'Bob': 85, 'Charlie': 92};
   print('اطبع درجة Alice:');
   print(scores['Alice']);
-
   print('اطبع جميع الدرجات:');
-  scores.forEach((name, score) {
-    print('$name: $score');
+  scores.forEach((x, y) {
+    print('$x: $y');
   });
-
   print('اضف درجة جديدة:');
   scores['David'] = 88;
   print(scores);
-
   print('احذف درجة Bob:');
   scores.remove('Bob');
   print(scores);
-  scores['elia']=95;
+  print('تحديث درجة Alice');
+  scores.update('Alice', (value) => 60);
   print(scores);
-  scores.update('elia', (value) => 100);
-  print(scores);  
-  print(scores.length);
 }*/
+//              {22}
 /*void main() {
-  // إنشاء قائمة الكتب
   List<String> favoriteBooks = [
     '1984',
     'الخيميائي',
@@ -425,387 +255,325 @@ void main() {
     'سلسلة هاري بوتر',
     'مقدمة ابن خلدون'
   ];
-
-  print('--- قائمة الكتب المفضلة ---');
-  // استخدام for loop
+ print('--- قائمة الكتب المفضلة ---');
   for (int i = 0; i < favoriteBooks.length; i++) {
     print('الكتاب ${i + 1}: ${favoriteBooks[i]}');
   }
-}*/
-// إنشاء مجموعة الهوايات
-/*void main() {
   Set<String> hobbies = {'القراءة', 'البرمجة', 'المشي', 'التصوير', 'السفر'};
-
   print('\n--- الهوايات المفضلة ---');
-  // استخدام forEach loop
   hobbies.forEach((hobby) {
     print('هواية: $hobby');
   });
 }*/
-// إنشاء خريطة العناصر وأسعارها
-/*void main() {
-  Map<String, double> groceryPrices = {
-    'حليب': 15.5,
-    'خبز': 2.0,
-    'قهوة': 45.0,
-    'تمر': 30.0,
-  };
-
-
-  print('\n--- قائمة الأسعار ---');
-  // استخدام forEach لطباعة العنصر وسعره
-  groceryPrices.forEach((item, price) {
-    print('العنصر: $item | السعر: $price ريال');
-  });
-}*/
-//حل كل التمرين المطلوبة بي الترتيبر
-/*void main() {
-  int num1 = 20;
-  double num2 = 10.5;
-  double result1 = num1 + num2;
-  double result2 = num1 * num2;
-  double result3 = num1 - num2;
-  double result4 = num1 / num2;
-  double result5 = num1 % num2;
-  bool isGreater = num1 > num2;
-  bool isLess = num1 < num2;
-  print(' these is result : $num1 + $num2 = $result1');
-  print(' these is result : $num1 * $num2 = $result2');
-  print(' these is result : $num1 - $num2 = $result3');
-  print(' these is result : $num1 / $num2 = $result4');
-  print(' these is result : $num1 % $num2 = $result5');
-  print(' is $num1 greater than $num2? : $isGreater');
-  print(' is $num1 less than $num2? : $isLess');
-}*/
-/*void main(){
-  const double pi = 3.14;
-  const double radius = 5.0;
-  double area = pi * radius * radius;
-  print('The area of the circle with radius $radius is $area');
-}*/
-/*void main() {
-  String name = 'elia';
-  int age = 23;
-  String massege = 'my name is $name and my age is $age yers old';
-  print(massege);
-}*/
-/*import 'dart:io';*/
-/*void main() {
-  print('entar your farst number:');
-  double? num1 = double.tryParse(stdin.readLineSync()!);
-  print('entar your operation (+, -, *, /, %):');
-  String? operation = stdin.readLineSync();
-  print('entar your second number:');
-  double? num2 = double.tryParse(stdin.readLineSync()!);
-  if (num1 == null || num2 == null || operation == null) {
-    print('Invalid input. Please enter valid numbers and operation.');
-    return;
-  }
-  double? result;
-  if (operation == '+') {
-    result = num1 + num2;
-  } else if (operation == '-') {
-    result = num1 - num2;
-  } else if (operation == '*') {
-    result = num1 * num2;
-  } else if (operation == '/') {
-    result = num1 / num2;
-  } else if (operation == '%') {
-    result = num1 % num2;
-  }
-  print('Result: $result');
-}*/
-/*import 'dart:io';*/
-/*void main() {
-  print('enter your day');
-  int? day = int.tryParse(stdin.readLineSync()!);
-  switch (day) {
-    case 1:
-      print(' Today is monday');
-      break;
-    case 2:
-      print(' Today is tuesday');
-      break;
-    case 3:
-      print(' Today is wednesday');
-      break;
-    case 4:
-      print(' Today is thursday');
-      break;
-    case 5:
-      print(' Today is friday');
-      break;
-    case 6:
-      print(' Today is saturday');
-      break;
-    case 7:
-      print(' Today is sunday');
-      break;
-    default:
-      print('invalid day');
-  }
-}*/
-/*void main() {
-  for (int i = 1; i <= 20; i++) {
-    if (i % 2 == 0) {
-      print(i);
-    }
-  }
-}*/
-/*void main() {
-  int i = 1;
-  while (i <= 20) {
-    if (i % 2 != 0) {
-      print(i);
-    }
-    i++;
-  }
-}*/
-/*import 'dart:io';*/
-/*void main() {
-  print("Enter a positive integer:");
-  String? input = stdin.readLineSync();
-  int number = int.parse(input ?? '0');
-  int originalNumber = number;
-  int sum = 0;
-  do {
-    int digit = number % 10;   
-    sum += digit;               
-    number = number ~/ 10;  
-  } while (number > 0);
-  print("The sum of digits in $originalNumber is: $sum");
-}*/
-/*void main(){
-  for(int i=1;i<=50;i++){
-    if (i%3==0)continue;
-    print(i);
-  }
-}*/
-/*void multiply (int a, int b) {
-  int result = a * b;
-  print('the result of $a * $b = $result');}
-}
-void main(){
-  multiply(5, 6);
-int multiply(int x, int y) => x * y;
-void main(){
-  int result = multiply(4, 7);
-  print('the result of 4 * 7 = $result');
-}*/
-/*bool isEven(int number) {
-  if (number % 2 == 0) {
-    return true;
+//            {23}
+/*import 'dart:io';
+String getGrade(double score) {
+  if (score >= 90 && score <= 100) {
+    return "ممتاز (A)";
+  } else if (score >= 80) {
+    return "جيد جداً (B)";
+  } else if (score >= 70) {
+    return "جيد (C)";
+  } else if (score >= 50) {
+    return "مقبول (D)";
+  } else if (score >= 0 && score < 50) {
+    return "راسب (F)";
   } else {
-    return false;
+    return "درجة غير منطقية!";
   }
 }
 void main() {
-  print(isEven(10)); 
-  print(isEven(7));  
+  stdout.write("من فضلك أدخل درجة الطالب: ");
+  String? input = stdin.readLineSync();
+  print(getGrade(double.parse(input!)));
 }*/
-/*void massage(String name) {
-  print('hello $name');
+//              {24}
+/*List<int> x(List<int> myList) {
+  List<int> result = [];
+  for (int number in myList) {
+    if (number % 2 == 0 && number > 10) {
+      result.add(number);
+    }
+  }
+  return result;
 }
 void main() {
-  massage('elia');
+  List<int> numbers = [5, 12, 18, 7, 22, 9, 30, 3, 14];
+  List<int> z = x(numbers);
+  print("Filtered Numbers: $z");
 }*/
-// 1. Function with Required and Optional Named Parameters
-/*void describePerson({
-  required String name,
-  int age = 0,
-  String occupation = 'Unknown',
-}) {
-  print('$name is $age years old and works as a $occupation.');
-}
-void main() {
-  describePerson(name: 'Alice', age: 30, occupation: 'Engineer');
-  describePerson(name: 'Bob', age: 25);
-  describePerson(name: 'Charlie');
-}*/
-/*double calculateArea([double length = 1, double width = 1]) {
-  return length * width;
-}
-void main() {
-  print({calculateArea()}); 
-  print({calculateArea(5, 4)});
-}*/
+//         {25}
 /*void main() {
-  List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  var doubledNumbers = numbers.map((number) => number * 2).toList();
-  print(doubledNumbers);
-}*/
-/*Function makeMultiplier(int factor) {
-  return (int number) => number * factor;
-}
-void main() {
-  var doubleIt = makeMultiplier(2);
-  var tripleIt = makeMultiplier(3);
-  print(doubleIt(5));   
-  print(tripleIt(5));   
-}*/
-// دالة الجمع
-/*double add(double a, double b) => a + b;
-
-// دالة الطرح
-double subtract(double a, double b) => a - b;
-
-// دالة الضرب
-double multiply(double a, double b) => a * b;
-
-// دالة القسمة مع معالجة القسمة على صفر
-double? divide(double a, double b) {
-  if (b == 0) {
-    print("Error: Cannot divide by zero.");
-    return null;
-  }
-  return a / b;
-}
-
-// الدالة الرئيسية للعمليات التي تستدعي الدوال الأخرى
-void calculate(double num1, double num2, String operator) {
-  double? result;
-
-  switch (operator) {
-    case '+':
-      result = add(num1, num2);
-      break;
-    case '-':
-      result = subtract(num1, num2);
-      break;
-    case '*':
-      result = multiply(num1, num2);
-      break;
-    case '/':
-      result = divide(num1, num2);
-      break;
-    default:
-      print("Invalid operator!");
-      return;
-  }
-
-  if (result != null) {
-    print("Result: $num1 $operator $num2 = $result");
-  }
-}
-
-void main() {
-  // أمثلة لتشغيل الآلة الحاسبة
-  calculate(10, 5, '+'); // الجمع
-  calculate(10, 5, '-'); // الطرح
-  calculate(10, 5, '*'); // الضرب
-  calculate(10, 2, '/'); // القسمة
-  calculate(10, 0, '/'); // تجربة القسمة على صفر
-}*/
-// دالة لتحويل أول حرف إلى كبير
-/*String capitalize(String text) {
-  if (text.isEmpty) return text;
-  return text[0].toUpperCase() + text.substring(1).toLowerCase();
-}
-
-// دالة لإضافة علامة تعجب في النهاية
-String exclaim(String text) {
-  return "$text!";
-}
-
-// دالة التحية التي تدمج الدوال السابقة
-String greet(String name) {
-  String capitalizedName = capitalize(name);
-  String shoutedName = exclaim(capitalizedName);
-  return "Hello, $shoutedName";
-}
-
-void main() {
-  // اختبار دالة greet بأسماء مختلفة
-  print(greet("ahmed"));  // المخرجات: Hello, Ahmed!
-  print(greet("SARA"));   // المخرجات: Hello, Sara!
-  print(greet("gemini")); // المخرجات: Hello, Gemini!
-}*/
-/*void main() {
-  List<int> ages = [20, 25, 30, 35];
-  ages.add(40);          
-  ages.addAll([45, 50]);
-  ages.removeAt(0);
-  print("Updated ages list: $ages");
-  print("Total number of elements: ${ages.length}");
-}*/
-/*void main() {
-  Set<String> words = {'welcom', 'elia', 'hi'};
-  words.add('nagi');
-  words.addAll({'elia', 'hi', 'oky'});
-  words.remove('hi');
-  print("Final set of words: $words");
-}*/
-/*void main() {
-  // 1. قائمة الكتب المفضلة (List)
-  List<String> favoriteBooks = [
-    "Clean Code",
-    "The Pragmatic Programmer",
-    "Dart in Action",
-    "Refactoring",
-    "Design Patterns"
-  ];
-
-  print("--- Top 5 Favorite Books (using for loop) ---");
-  // استخدام for loop التقليدية
-  for (int i = 0; i < favoriteBooks.length; i++) {
-    print("${i + 1}. ${favoriteBooks[i]}");
-  }
-
-  print("\n--- Favorite Hobbies (using forEach) ---");
-  // 2. مجموعة الهوايات (Set)
-  Set<String> hobbies = {"Reading", "Coding", "Gaming", "Swimming"};
-
-  // استخدام forEach loop
-  hobbies.forEach((hobby) {
-    print("I love $hobby");
-  });
-
-  print("\n--- Item Prices (using Map forEach) ---");
-  // 3. خريطة الأصناف وأسعارها (Map)
-  Map<String, double> items = {
-    "Laptop": 1200.50,
-    "Mouse": 25.0,
-    "Keyboard": 45.99,
-    "Monitor": 250.0
+  Map<String, double> fruitStore = {
+    'تفاح': 5.0,
+    'موز': 3.5,
+    'برتقال': 4.0,
+    'مانجو': 10.0,
   };
-
-  // استخدام forEach لطباعة المفتاح والقيمة
-  items.forEach((item, price) {
-    print("Item: $item | Price: \$$price");
-  });
+  calculateTotal(fruitStore, 'تفاح', 3);
+  calculateTotal(fruitStore, 'مانجو', 2);
+  calculateTotal(fruitStore, 'عنب', 5);
+}
+void calculateTotal(Map<String, double> store, String fruitName, int quantity) {
+  if (store.containsKey(fruitName)) {
+    double price = store[fruitName]!; 
+    double total = price * quantity;
+    print("الطلب: $quantity كيلو $fruitName.");
+    print("السعر الإجمالي: $total ريال/جنيه.");
+  } else {
+    print("عذراً، فاكهة ($fruitName) غير متوفرة في المتجر حالياً.");
+  }
 }*/
-/*void main() {
-  // 1. استخدام reduce لإيجاد المجموع
-  List<int> numbers = [10, 20, 30, 40, 50];
+//             {26}
+/*class Std {
+  String? name;
+  String? mada;
+  int? id;
+  int? year;
 
-  // دالة reduce تدمج عناصر القائمة في قيمة واحدة
-  int sum = numbers.reduce((value, element) => value + element);
+  String? getInfo() {
+    return "Student name: $name, major: $mada, ID: $id, Year: $year.";
+  }
+}
+void main() {
+  var elia = Std();
+  elia.name = "Elia";
+  elia.mada = "Math";
+  elia.id = 1;
+  elia.year = 2003;
+  var ahmed = Std();
+  ahmed.name = "Ahmed";
+  ahmed.mada = "Physics";
+  ahmed.id = 2;
+  ahmed.year = 2004;
+  print(elia.getInfo());
+  print(ahmed.getInfo());
+}*/
+//            {27}
+/*class Cars {
+  String? name;
+  String? model;
+  int? year;
+  String? color;
+  carDetails(String name, String model, int year, String color) {
+    print("this cars ");
+    this.name = name;
+    this.model = model;
+    this.year = year;
+    this.color = color;
+  }
+}
+void main (){
+  var car1 = Cars();
+  car1.carDetails("Toyota", "Corolla", 2020, "Red");
+  print("Car 1: ${car1.name}, Model: ${car1.model}, Year: ${car1.year}, Color: ${car1.color}");
+
+  var car2 = Cars();
+  car2.carDetails("Honda", "Civic", 2019, "Blue");
+  print("Car 2: ${car2.name}, Model: ${car2.model}, Year: ${car2.year}, Color: ${car2.color}");
+}*/
+//            {28}
+/*class Cars {
+  String? name;
+  String? model;
+  int? year;
+  String? color;
+  Cars([this.name, this.model, this.year, this.color]);
+  void display() {
+    print('this daitels it is cars');
+    print("Car Name: $name   Model: $model     Year: $year    color: $color");
+  }
+}
+void main() {
+  var car1 = Cars('Toyota', 'corolla', 2020, 'black');
+  car1.display();
+}*/
+//             {29}
+/*class Nnn {
+  String? name;
+  int? age;
+  String? father;
+  String? mother;
+  Nnn(this.name, this.age, [this.father = null, this.mother = null]);
+  void display() {
+    print('my name is:${this.name}');
+    print('i am :${this.age} ayer');
+    print('my father is:${this.father}');
+    print('my mother is:${this.mother}');
+  }
+}
+void main() {
+  var x = new Nnn('elia', 23, 'nagi');
+  x.display();
+}*/
+/*class Person {
+  String? name;
+  int? age;
+
+  void display() {
+    print('name:$name');
+    print('age:$age');
+  }
+}
+
+class Std extends Person {
+  String? school;
+  String? schoolId;
+
+  void displayschoolinfo() {
+    print('school:$school');
+    print('school:$schoolId');
+  }
+}
+
+void main() {
+  var x = Std();
+  x.age = 21;
+  x.name = 'elia';
+  x.school = 'new';
+  x.schoolId = '10';
+  x.display();
+  x.displayschoolinfo();
+}*/
+/*class Car {
+  String? name;
+  double? prize;
+}
+class Tasla extends Car {
+  void display() {
+    print('name:$name');
+    print('prize:$prize');
+  }
+}
+class Model extends Tasla {
+  String? color;
+  void display() {
+    super.display();
+    print('color:$color');
+  }
+}
+void main() {
+  Model a = new Model();
+  a.name = 'bmw';
+  a.prize = 10;
+
+  a.display();
+}*/
+/*class Student {
+  // 1. الخصائص (Properties / Fields)
+  String? name;
+  int? age;
+  int? grade;
+
+  Student(this.name, this.age) {
+    grade = null;
+  }
+
+  // 2. الأفعال أو الوظائف (Methods)
+  void displayInfo() {
+    print("اسم الطالب: $name");
+    print("العمر: $age");
+    print('grade:$grade');
+  }
+}
+
+void main() {
+  var x = Student('elia', 23);
+  x.displayInfo();
+  var z = Student('name', 2025);
+  z.displayInfo();
+}*/
+// الكلاس الأب (الأساسي)
+/*class Employee {
+  String? name;
+  double? salary;
+
+  void showSalary() {
+    print("راتب الموظف $name هو $salary");
+  }
+}
+
+// الكلاس الابن (يرث من Employee)
+class Manager extends Employee {
+  String? department;
+
+  void manage() {
+    print("$name يقوم بإدارة قسم $department");
+  }
+}
+
+void main() {
+  // إنشاء كائن من الابن
+  var boss = Manager();
   
-  print("Sum of numbers: $sum"); // المخرجات: 150
+  // لاحظ: استطعنا الوصول للاسم والراتب رغم أنهما في الأب!
+  boss.name = "ياسين";
+  boss.salary = 7000;
+  boss.department = "التطوير";
 
-  // ---------------------------------------------------------
+  boss.showSalary(); // دالة من الأب
+  boss.manage();     // دالة خاصة بالابن
+}*/
+/*class Animal {
+  String? name;
+  String? legz;
+  String? color;
+  int? ziez;
+  Animal({
+    required this.name,
+    required this.color,
+    required this.legz,
+    required this.ziez,
+  });
+}
 
-  // 2. استخدام contains للتحقق من وجود عنصر في Set
-  Set<String> fruits = {'Apple', 'Banana', 'Orange'};
-  
-  bool hasMango = fruits.contains('Mango');
-  bool hasApple = fruits.contains('Apple');
+class Cat extends Animal {
+  Cat({
+    required super.name,
+    required super.color,
+    required super.legz,
+    required super.ziez,
+  });
+}
 
-  print("Contains Mango? $hasMango"); // false
-  print("Contains Apple? $hasApple"); // true
+class Dog extends Animal {
+  int? years;
+  Dog({
+    required super.name,
+    required super.color,
+    required super.legz,
+    required super.ziez,
+    required this.years,
+  });
+  void display() {
+    print('name:$name');
+    print('color:$color');
+    print('legz:$legz');
+    print('ziez:$ziez');
+    print('years:$years');
+  }
+}
 
-  // ---------------------------------------------------------
-
-  // 3. استخدام remove لحذف عنصر من Map
-  Map<int, String> students = {
-    101: "Ahmed",
-    102: "Sara",
-    103: "Ali"
-  };
-
-
-  // حذف الطالب صاحب الرقم 102
-  students.remove(102);
-
-  print("Updated Students Map: $students"); // المخرجات: {101: Ahmed, 103: Ali}
+void main() {
+  var x = Dog(color: 'black', name: 'max', legz: '4', ziez: 50,years:10 );
+  x.display();
+}*/
+/*class Parent {
+  String name;
+  // منشئ الفئة الأب
+  Parent(this.name) {
+    print("تم استدعاء منشئ الأب: $name");
+  }
+}
+class Child extends Parent {
+  int age;
+  // استدعاء منشئ الأب باستخدام super
+  Child(String name, this.age) : super(name) {
+    print("تم استدعاء منشئ الابن: العمر $age");
+  }
+}
+void main() {
+  var obj = Child("أحمد", 20);
+  obj.age;
+  obj.name;
 }*/

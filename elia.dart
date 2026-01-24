@@ -16,7 +16,7 @@
   print(' is $num1 greater than $num2? : $isGreater');
   print(' is $num1 less than $num2? : $isLess');
 }*/
-/*void main(){
+/*void main() {
   const double pi = 3.14;
   const double radius = 5.0;
   double area = pi * radius * radius;
@@ -171,6 +171,7 @@ void main() {
 /*void main() {
   List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   var doubledNumbers = numbers.map((number) => number * 2).toList();
+  print(numbers);
   print(doubledNumbers);
 }*/
 /*Function makeMultiplier(int factor) {
@@ -183,7 +184,8 @@ void main() {
   print(tripleIt(5));   
 }*/
 // دالة الجمع
-/*double add(double a, double b) => a + b;
+/*double add(double a, double b) {
+  return a + b;}
 
 // دالة الطرح
 double subtract(double a, double b) => a - b;
